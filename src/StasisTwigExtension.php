@@ -9,7 +9,7 @@ use Stasis\EventDispatcher\Listener\SiteGenerateInterface;
 use Stasis\Extension\ExtensionInterface;
 use Twig\Environment;
 
-class StasisTwigExtension implements ExtensionInterface, SiteGenerateInterface
+final class StasisTwigExtension implements ExtensionInterface, SiteGenerateInterface
 {
     private readonly TwigExtension $twigExtension;
 
