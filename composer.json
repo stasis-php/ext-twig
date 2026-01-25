@@ -1,0 +1,32 @@
+{
+    "name": "stasis/ext-twig",
+    "description": "Twig extension for Stasis",
+    "type": "library",
+    "license": "MIT",
+    "homepage": "https://github.com/stasis-php/ext-twig",
+    "authors": [
+        {
+            "name": "Volodymyr Stelmakh",
+            "homepage": "https://github.com/vstelmakh"
+        }
+    ],
+    "require": {
+        "php": "^8.4",
+        "stasis/stasis": "^0.1",
+        "twig/twig": "^3"
+    },
+    "require-dev": {},
+    "autoload": {
+        "psr-4": {
+            "Stasis\\Ext\\Twig\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Stasis\\Ext\\Twig\\Tests\\": "tests/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
