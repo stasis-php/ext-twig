@@ -8,6 +8,9 @@ use Stasis\Router\Router;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
+/**
+ * @internal
+ */
 final class TwigExtension extends AbstractExtension
 {
     private ?Router $router = null;
@@ -27,7 +30,12 @@ final class TwigExtension extends AbstractExtension
     private function getPath(string $name): string
     {
         if ($this->router === null) {
-            throw new \LogicException(sprintf('Router not initialized. Consider calling %s::setRouter before using.', self::class));
+            throw new \LogicException(sprintf(
+                'Router not initialized. Consider calling %s::setRouter before using.'
+                . ' If you see this error, most likely, %s is not correctly registered.',
+                self::class,
+                StasisTwigExtension::class,
+            ));
         }
 
         return $this->router->get($name)->path;
