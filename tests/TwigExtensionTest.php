@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Stasis\Ext\Twig\Tests;
+namespace Stasis\Extension\Twig\Tests;
 
 use PHPUnit\Framework\TestCase;
-use Stasis\Ext\Twig\TwigExtension;
+use Stasis\Extension\Twig\TwigExtension;
 use Stasis\Router\RouteData;
 use Stasis\Router\Router;
 use Twig\Environment;

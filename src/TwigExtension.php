@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stasis\Ext\Twig;
+namespace Stasis\Extension\Twig;
 
 use Stasis\Router\Router;
 use Twig\Extension\AbstractExtension;

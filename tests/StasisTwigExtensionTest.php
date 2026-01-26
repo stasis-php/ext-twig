@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Stasis\Ext\Twig\Tests;
+namespace Stasis\Extension\Twig\Tests;
 
 use FilesystemIterator;
 use PHPUnit\Framework\TestCase;

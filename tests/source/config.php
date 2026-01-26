@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 use Psr\Container\ContainerInterface;
 use Stasis\Config\ConfigInterface;
-use Stasis\Ext\Twig\StasisTwigExtension;
+use Stasis\Extension\Twig\StasisTwigExtension;
 use Stasis\Generator\Distribution\DistributionInterface;
 use Stasis\Generator\Distribution\FilesystemDistribution;
 use Stasis\Router\Route\Route;

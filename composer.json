@@ -23,12 +23,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Stasis\\Ext\\Twig\\": "src/"
+            "Stasis\\Extension\\Twig\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Stasis\\Ext\\Twig\\Tests\\": "tests/"
+            "Stasis\\Extension\\Twig\\Tests\\": "tests/"
         }
     },
     "config": {
