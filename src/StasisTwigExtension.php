@@ -4,12 +4,12 @@ declare(strict_types=1);
 
 namespace Stasis\Extension\Twig;
 
-use Stasis\EventDispatcher\Event\SiteGenerate\SiteGenerateData;
-use Stasis\EventDispatcher\Listener\SiteGenerateInterface;
+use Stasis\EventDispatcher\RouterReady\RouterReadyData;
+use Stasis\EventDispatcher\RouterReady\RouterReadyListenerInterface;
 use Stasis\Extension\ExtensionInterface;
 use Twig\Environment;
 
-final class StasisTwigExtension implements ExtensionInterface, SiteGenerateInterface
+final class StasisTwigExtension implements ExtensionInterface, RouterReadyListenerInterface
 {
     private readonly TwigExtension $twigExtension;
 
@@ -25,7 +25,7 @@ final class StasisTwigExtension implements ExtensionInterface, SiteGenerateInter
         return [$this];
     }
 
-    public function onSiteGenerate(SiteGenerateData $data): void
+    public function onRouterReady(RouterReadyData $data): void
     {
         $this->twigExtension->setRouter($data->router);
     }
