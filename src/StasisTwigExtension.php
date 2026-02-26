@@ -20,11 +20,13 @@ final class StasisTwigExtension implements ExtensionInterface, RouterReadyListen
         $this->twig->addExtension($this->twigExtension);
     }
 
+    #[\Override]
     public function listeners(): iterable
     {
         return [$this];
     }
 
+    #[\Override]
     public function onRouterReady(RouterReadyData $data): void
     {
         $this->twigExtension->setRouter($data->router);
