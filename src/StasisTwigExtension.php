@@ -9,12 +9,12 @@ use Stasis\EventDispatcher\RouterReady\RouterReadyListenerInterface;
 use Stasis\Extension\ExtensionInterface;
 use Twig\Environment;
 
-final class StasisTwigExtension implements ExtensionInterface, RouterReadyListenerInterface
+final readonly class StasisTwigExtension implements ExtensionInterface, RouterReadyListenerInterface
 {
-    private readonly TwigExtension $twigExtension;
+    private TwigExtension $twigExtension;
 
     public function __construct(
-        public readonly Environment $twig,
+        public Environment $twig,
     ) {
         $this->twigExtension = new TwigExtension();
         $this->twig->addExtension($this->twigExtension);
