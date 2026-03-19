@@ -1,7 +1,7 @@
 # Stasis Twig Extension
 
 Stasis Twig Extension is an adapter that integrates [Twig](https://twig.symfony.com/) templating engine with [Stasis](https://github.com/stasis-php/stasis).
-Extension integrates with a Stasis routing system and adds `path` twig function that returns a path to a page.
+Extension integrates with a Stasis routing system and adds `route_path` twig function that returns a path to a page.
 
 ## Installation
 Install the latest version with [Composer](https://getcomposer.org/):
@@ -54,9 +54,9 @@ return new class implements ConfigInterface {
 > The configuration example above shows only the relevant configuration, omitting unrelated parts.
 
 ## Usage
-In template, use `path` function to generate a path to a page:
+In template, use `route_path` function to generate a path to a page:
 ```twig
-<a href="{{ path('home') }}">Home</a>
+<a href="{{ route_path('home') }}">Home</a>
 ```
 
 > [!NOTE]  

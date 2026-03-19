@@ -35,7 +35,7 @@ final class TwigExtensionTest extends TestCase
 
         $this->extension->setRouter($router);
 
-        $template = 'Path: {{ path("home") }}';
+        $template = 'Path: {{ route_path("home") }}';
         $actual = $this->twig->createTemplate($template)->render();
         self::assertSame('Path: /home', $actual);
     }
@@ -48,7 +48,7 @@ final class TwigExtensionTest extends TestCase
             TwigExtension::class,
         ));
 
-        $template = 'Path: {{ path("home") }}';
+        $template = 'Path: {{ route_path("home") }}';
         $this->twig->createTemplate($template)->render();
     }
 }
