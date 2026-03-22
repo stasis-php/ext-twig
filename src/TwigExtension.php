@@ -15,6 +15,7 @@ final class TwigExtension extends AbstractExtension
 {
     private ?Router $router = null;
 
+    #[\Override]
     public function getFunctions(): array
     {
         return [
