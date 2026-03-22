@@ -14,6 +14,7 @@ class StasisTwigExtensionTest extends TestCase
 {
     private Process $process;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->process = new Process([

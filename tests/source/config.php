@@ -22,6 +22,7 @@ return new class implements ConfigInterface {
         $this->twig = new Environment($loader);
     }
 
+    #[\Override]
     public function routes(): iterable
     {
         return [
@@ -30,16 +31,19 @@ return new class implements ConfigInterface {
         ];
     }
 
+    #[\Override]
     public function container(): ContainerInterface
     {
         return new NoContainer();
     }
 
+    #[\Override]
     public function distribution(): DistributionInterface
     {
         return new FilesystemDistribution(__DIR__ . '/../dist');
     }
 
+    #[\Override]
     public function extensions(): iterable
     {
         return [
