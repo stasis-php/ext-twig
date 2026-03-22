@@ -6,4 +6,9 @@ parameters:
     - tests
 
   reportUnmatchedIgnoredErrors: true
+  checkDynamicProperties: true
+  reportNonIntStringArrayKey: true
+  checkMissingOverrideMethodAttribute: true
+  checkStrictPrintfPlaceholderTypes: true
+
   ignoreErrors:

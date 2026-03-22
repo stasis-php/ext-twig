@@ -17,6 +17,7 @@ final class TwigExtensionTest extends TestCase
     private Environment $twig;
     private TwigExtension $extension;
 
+    #[\Override]
     public function setUp(): void
     {
         $this->twig = new Environment(new ArrayLoader());
