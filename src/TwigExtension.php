@@ -19,7 +19,7 @@ final class TwigExtension extends AbstractExtension
     public function getFunctions(): array
     {
         return [
-            new TwigFunction('path', $this->getPath(...)),
+            new TwigFunction('route_path', $this->getPath(...)),
         ];
     }
 
