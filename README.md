@@ -6,7 +6,7 @@ Extension integrates with a Stasis routing system and adds `route_path` twig fun
 ## Installation
 Install the latest version with [Composer](https://getcomposer.org/):
 ```shell
-composer require stasis-php/ext-twig
+composer require stasis/ext-twig
 ```
 
 ## Configuration
